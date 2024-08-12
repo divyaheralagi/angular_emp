@@ -1,0 +1,15 @@
+<div>
+    <h2>Employee Management</h2>
+    <button (click)="addEmployee({ name: 'John Doe', email: 'john.doe@example.com', phone: '1234567890' })">
+      Add Employee
+    </button>
+  
+    <ul>
+      <li *ngFor="let employee of employees">
+        {{ employee.id }} - {{ employee.name }} ({{ employee.email }})
+        <button (click)="updateEmployee(employee)">Edit</button>
+        <button (click)="deleteEmployee(employee.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
